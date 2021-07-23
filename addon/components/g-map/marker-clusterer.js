@@ -1,6 +1,6 @@
 import MapComponent from 'ember-google-maps/components/g-map/map-component';
 import MarkerClusterer from '@googlemaps/markerclustererplus';
-import { TrackedSet } from '@sandydoo/tracked-built-ins';
+import { TrackedSet } from '@sandydoo/tracked-maps-and-sets';
 import { action } from '@ember/object';
 
 export default class MarkerClustererComponent extends MapComponent {
