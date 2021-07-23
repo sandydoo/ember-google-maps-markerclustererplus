@@ -1,16 +1,19 @@
 {
   "name": "ember-google-maps-markerclustererplus",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Add marker clustering to ember-google-maps using @googlemaps/markerclustererplus",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "ember-google-maps-addon"
   ],
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sandydoo/ember-google-maps-markerclustererplus"
+  },
   "license": "MIT",
-  "author": "",
+  "author": "Sander Melnikov <hey@sandydoo.me>",
   "private": true,
   "directories": {
-    "doc": "doc",
     "test": "tests"
   },
   "scripts": {

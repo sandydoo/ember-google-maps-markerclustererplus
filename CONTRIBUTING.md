@@ -2,7 +2,7 @@
 
 ## Installation
 
-* `git clone <repository-url>`
+* `git clone https://github.com/sandydoo/ember-google-maps-markerclustererplus`
 * `cd ember-google-maps-markerclustererplus`
 * `yarn install`
 
