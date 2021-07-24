@@ -23,16 +23,64 @@ ember install ember-google-maps-markerclustererplus
 Usage
 ------------------------------------------------------------------------------
 
+#### Cluster some markers
+
+The `markerClusterer` works in the same way as any other [ember-google-maps][ember-google-maps] component. If you're not sure how this works, [read through the guide for ember-google-maps][ember-google-maps-guide].
+
+The `markerClusterer` yields its own special `marker` that's added to the cluster, instead of the map.
+
 ```hbs
 <GMap @lat="51.508530" @lng="-0.076132" as |map|>
+
   <map.markerClusterer as |cluster|>
+
     {{#each this.locations as |location|}}
       <cluster.marker @lat={{location.lat}} @lng={{location.lng}} />
     {{/each}}
+
   </map.cluster>
 </GMap>
 ```
 
+#### Handle events
+
+You can also register events. You've got your usual suspects, like `click`, `dblclick`, and others, and also two special events: `clusteringbegin` and `clusteringend`. These are both native, albeit poorly publicized, `markerclustererplus` events. But beware! These clustering events may be called several times during a single render, because `markerclustererplus` clusters markers in batches.
+
+```hbs
+<GMap @lat="51.508530" @lng="-0.076132" as |map|>
+
+  <map.markerClusterer
+    @onClick={{this.whenAClusterMarkerIsClicked}}
+    @onClusteringbegin={{this.whenABatchOfMarkersIsToBeClustered}}
+    @onClusteringend={{this.whenABatchOfMarkersHasBeenClustered}}
+    as |cluster|>
+
+    {{#each this.locations as |location|}}
+      <cluster.marker @lat={{location.lat}} @lng={{location.lng}} />
+    {{/each}}
+
+  </map.cluster>
+</GMap>
+```
+
+#### Get the `MarkerClusterer` instance
+
+The best way to do this is to register a one-time event with `@onceOn`.
+
+```hbs
+<GMap @lat="51.508530" @lng="-0.076132" as |map|>
+
+  <map.markerClusterer
+    @onceOnClusteringend={{this.getMarkerClusterer}}
+    as |cluster|>
+
+    {{#each this.locations as |location|}}
+      <cluster.marker @lat={{location.lat}} @lng={{location.lng}} />
+    {{/each}}
+
+  </map.cluster>
+</GMap>
+```
 
 😇 Maintainers
 --------------------------------------------------------------------------------
@@ -53,10 +101,11 @@ License
 
 This software is not endorsed, maintained, or supported by Google LLC.
 
-© 2020 Google LLC All rights reserved. Google Maps™ is a trademark of Google LLC.
+© 2021 Google LLC All rights reserved. Google Maps™ is a trademark of Google LLC.
 
 
 [ember-google-maps]: https://github.com/sandydoo/ember-google-maps
+[ember-google-maps-guide]: https://ember-google-maps.sandydoo.me/docs/getting-started
 [@googlemaps/markerclustererplus]: https://github.com/googlemaps/js-markerclustererplus
 
 [maintainer-url]: https://github.com/sandydoo
