@@ -14,7 +14,7 @@ export default class MarkerClustererComponent extends MapComponent {
     return Array.from(this.markers).map((marker) => marker.mapComponent);
   }
 
-  setup(options) {
+  setup(options, events) {
     options.imagePath ??= 'assets/markerclustererplus/images/m';
 
     const markerClusterer = new MarkerClusterer(
@@ -23,7 +23,14 @@ export default class MarkerClustererComponent extends MapComponent {
       options
     );
 
+    this.addEventsToMapComponent(markerClusterer, events, this.publicAPI);
+
     return markerClusterer;
+  }
+
+  teardown(mapComponent) {
+    mapComponent.clearMarkers();
+    super.teardown();
   }
 
   @action
