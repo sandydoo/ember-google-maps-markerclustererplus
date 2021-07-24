@@ -11,7 +11,9 @@ export default class MarkerClustererComponent extends MapComponent {
   markers = new TrackedSet();
 
   get markerComponents() {
-    return Array.from(this.markers).map((marker) => marker.mapComponent);
+    return Array.from(this.markers)
+      .map((marker) => marker.mapComponent)
+      .filter(Boolean);
   }
 
   setup(options, events) {
