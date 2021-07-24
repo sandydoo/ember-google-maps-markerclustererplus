@@ -33,8 +33,7 @@ export default class MarkerClustererComponent extends MapComponent {
     return {
       // Don't add the marker to the map
       map: null,
-      // TODO
-      // remove: () => this.markers.delete(marker),
+      remove: () => this.markers.delete(marker),
     };
   }
 }
