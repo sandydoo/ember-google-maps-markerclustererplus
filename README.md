@@ -6,7 +6,7 @@ Add marker clustering to [ember-google-maps][ember-google-maps] using [@googlema
 🔗 Compatibility
 ------------------------------------------------------------------------------
 
-* Ember Google Maps v4.0 or above
+* Ember Google Maps v4.2 or above
 * Ember.js v3.16 or above
 * Ember CLI v3.16 or above
 * Node.js v10 or above
