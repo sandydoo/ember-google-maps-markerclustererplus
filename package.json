@@ -4,7 +4,10 @@
   "description": "Add marker clustering to ember-google-maps using @googlemaps/markerclustererplus",
   "keywords": [
     "ember-addon",
-    "ember-google-maps-addon"
+    "ember-google-maps-addon",
+    "google",
+    "maps",
+    "markerclustererplus"
   ],
   "repository": {
     "type": "git",
@@ -12,9 +15,13 @@
   },
   "license": "MIT",
   "author": "Sander Melnikov <hey@sandydoo.me>",
-  "private": true,
   "directories": {
     "test": "tests"
+  },
+  "homepage": "https://ember-google-maps.sandydoo.me",
+  "funding": {
+    "type": "individual",
+    "url": "https://ko-fi.com/sandydoo"
   },
   "scripts": {
     "build": "ember build --environment=production",
@@ -76,7 +83,9 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.2.1",
     "qunit": "^2.14.1",
-    "qunit-dom": "^1.6.0"
+    "qunit-dom": "^1.6.0",
+    "release-it": "^14.10.1",
+    "release-it-lerna-changelog": "^3.1.0"
   },
   "engines": {
     "node": "10.* || >= 12"
@@ -86,5 +95,36 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "changelog": {
+    "labels": {
+      "breaking": ":boom: Breaking changes",
+      "enhancement": ":star: Features",
+      "bug": ":bug: Bug fixes",
+      "documentation": ":book: Documentation",
+      "internal": "Internal"
+    }
+  },
+  "release-it": {
+    "plugins": {
+      "release-it-lerna-changelog": {
+        "infile": "CHANGELOG.md",
+        "launchEditor": true
+      }
+    },
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true,
+      "tokenRef": "GITHUB_AUTH"
+    }
+  },
+  "volta": {
+    "node": "14.16.1",
+    "yarn": "1.22.10"
   }
 }
