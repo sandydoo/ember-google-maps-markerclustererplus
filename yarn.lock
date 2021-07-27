@@ -3062,7 +3062,7 @@ broccoli-funnel-reducer@^1.0.0:
   resolved "https://registry.yarnpkg.com/broccoli-funnel-reducer/-/broccoli-funnel-reducer-1.0.0.tgz#11365b2a785aec9b17972a36df87eef24c5cc0ea"
   integrity sha1-ETZbKnha7JsXlyo234fu8kxcwOo=
 
-broccoli-funnel@>=2.0.0, broccoli-funnel@^3.0.3, broccoli-funnel@^3.0.6, broccoli-funnel@^3.0.8:
+broccoli-funnel@>=3.0.8, broccoli-funnel@^3.0.3, broccoli-funnel@^3.0.6, broccoli-funnel@^3.0.8:
   version "3.0.8"
   resolved "https://registry.yarnpkg.com/broccoli-funnel/-/broccoli-funnel-3.0.8.tgz#f5b62e2763c3918026a15a3c833edc889971279b"
   integrity sha512-ng4eIhPYiXqMw6SyGoxPHR3YAwEd2lr9FgBI1CyTbspl4txZovOsmzFkMkGAlu88xyvYXJqHiM2crfLa65T1BQ==
@@ -4964,7 +4964,7 @@ ember-compatibility-helpers@^1.1.2, ember-compatibility-helpers@^1.2.0, ember-co
     fs-extra "^9.1.0"
     semver "^5.4.1"
 
-ember-concurrency@^2.0.0:
+ember-concurrency@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/ember-concurrency/-/ember-concurrency-2.1.0.tgz#5e55c19f43fb245c4fbe0628cbf26cc6561af40c"
   integrity sha512-NIJfphS9NvO3Fin+QPQkTvhD8rFDc9ydpy+my+VFLcCfC5F+yI6sr5tHVSgSVBh8UutloHvIbGvdfKuoY6Abyg==
@@ -4994,21 +4994,21 @@ ember-export-application-global@^2.0.1:
   resolved "https://registry.yarnpkg.com/ember-export-application-global/-/ember-export-application-global-2.0.1.tgz#b120a70e322ab208defc9e2daebe8d0dfc2dcd46"
   integrity sha512-B7wiurPgsxsSGzJuPFkpBWnaeuCu2PGpG2BjyrfA1VcL7//o+5RSnZqiCEY326y7qmxb2GoCgo0ft03KBU0rRw==
 
-ember-google-maps@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/ember-google-maps/-/ember-google-maps-4.2.0.tgz#9f20dda04bc6e1a96a0af83256117c781ee8d3ba"
-  integrity sha512-64IKE5JsM5KIV/7eyQZMNe+ugI38V4Y5PKU7Jibh7KhibsswCTxLvFIVm0UBreVTbeltf/gLvZABaP7L63VQDQ==
+ember-google-maps@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/ember-google-maps/-/ember-google-maps-4.2.1.tgz#330efb327853526915829d52dcad544a69bd7dba"
+  integrity sha512-sGlxnV+xA3iEbPlMDs3VI+SZnjRmOS6mo+PaT+Swj49ywSkxkNAxCdfefitiY1noiTUqyglJDW7w2Ua6g+aF+w==
   dependencies:
     "@sandydoo/tracked-maps-and-sets" "^2.2.2"
     babel-plugin-ember-modules-api-polyfill ">=3.5.0"
     broccoli-debug "^0.6.5"
-    broccoli-funnel ">=2.0.0"
+    broccoli-funnel ">=3.0.8"
     camelcase "^6.0.0"
-    chalk "^4.1.0"
+    chalk "^4.1.1"
     ember-cache-primitive-polyfill "^1.0.1"
-    ember-cli-babel "^7.23.1"
+    ember-cli-babel "^7.26.6"
     ember-cli-htmlbars "^5.3.2"
-    ember-concurrency "^2.0.0"
+    ember-concurrency "^2.1.0"
     ember-in-element-polyfill "^1.0.0"
     ember-modifier "^2.1.2"
     lodash "^4.17.21"
