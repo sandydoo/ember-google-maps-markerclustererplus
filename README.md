@@ -1,5 +1,7 @@
 # MarkerClustererPlus for Ember Google Maps 
 
+[![Latest version][npm-version-badge]][npm-url]
+
 Add marker clustering to [ember-google-maps][ember-google-maps] using [@googlemaps/markerclustererplus][@googlemaps/markerclustererplus].
 
 
@@ -103,6 +105,9 @@ This software is not endorsed, maintained, or supported by Google LLC.
 
 © 2021 Google LLC All rights reserved. Google Maps™ is a trademark of Google LLC.
 
+
+[npm-version-badge]: https://img.shields.io/npm/v/ember-google-maps-markerclustererplus.svg?label=latest
+[npm-url]: https://www.npmjs.org/package/ember-google-maps-markerclustererplus
 
 [ember-google-maps]: https://github.com/sandydoo/ember-google-maps
 [ember-google-maps-guide]: https://ember-google-maps.sandydoo.me/docs/getting-started
