@@ -17,6 +17,11 @@ export default class MarkerClustererComponent extends MapComponent {
   }
 
   setup(options, events) {
+    // Nothing to do when there are no markers
+    if (this.markerComponents.length === 0) {
+      return;
+    }
+
     options.imagePath ??= 'assets/markerclustererplus/images/m';
 
     const markerClusterer = new MarkerClusterer(
