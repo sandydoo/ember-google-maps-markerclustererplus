@@ -1,7 +1,7 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { setupMapTest } from 'ember-google-maps/test-support';
-import { click, find, findAll, render } from '@ember/test-helpers';
+import { click, waitFor as waitFor_, render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import { A } from '@ember/array';
 
@@ -9,12 +9,17 @@ function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+// Increase the default timeouts. Things can take a while sometimes.
+function waitFor(selector, options = {}) {
+  return waitFor_(selector, { timeout: 5000, ...options });
+}
+
 function randomCoordinatesAround({ lat, lng }, count = 1) {
   let coords = [];
 
   for (let n = 0; n < count; n++) {
     let heading = randomInt(1, 360),
-      distance = randomInt(100, 5000),
+      distance = randomInt(50, 1000),
       point = window.google.maps.geometry.spherical.computeOffset(
         new window.google.maps.LatLng(lat, lng),
         distance,
@@ -68,7 +73,7 @@ module('Integration | Component | g-map/marker-clusterer', function (hooks) {
       'all markers are managed by the cluster'
     );
 
-    let clusterMarkers = await findAll('.cluster');
+    let clusterMarkers = await waitFor('.cluster');
     assert.ok(clusterMarkers, 'there are clusters on the map');
   });
 
@@ -94,7 +99,8 @@ module('Integration | Component | g-map/marker-clusterer', function (hooks) {
 
     await this.waitForMap();
 
-    let someClusterMarker = await find('.cluster');
+    let clusters = await waitFor('.cluster');
+    let someClusterMarker = clusters.length ? clusters[0] : clusters;
     await click(someClusterMarker);
 
     assert.ok(this.events.includes('click'), 'registered a click event');
