@@ -19,7 +19,7 @@ function randomCoordinatesAround({ lat, lng }, count = 1) {
 
   for (let n = 0; n < count; n++) {
     let heading = randomInt(1, 360),
-      distance = randomInt(100, 5000),
+      distance = randomInt(50, 1000),
       point = window.google.maps.geometry.spherical.computeOffset(
         new window.google.maps.LatLng(lat, lng),
         distance,
