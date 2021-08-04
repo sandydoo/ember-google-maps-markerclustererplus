@@ -84,6 +84,11 @@ The best way to do this is to register a one-time event with `@onceOn`.
 </GMap>
 ```
 
+#### More cluster icons
+
+The MarkerClustererPlus library comes with a small collection of default cluster icons to choose from. They're all copied to `/assets/markerclustererplus/images/`.
+
+
 😇 Maintainers
 --------------------------------------------------------------------------------
 
