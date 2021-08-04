@@ -22,7 +22,7 @@ export default class MarkerClustererComponent extends MapComponent {
       return;
     }
 
-    options.imagePath ??= 'assets/markerclustererplus/images/m';
+    options.imagePath ??= '/assets/markerclustererplus/images/m';
 
     const markerClusterer = new MarkerClusterer(
       this.map,
