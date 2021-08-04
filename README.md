@@ -4,6 +4,10 @@
 
 Add marker clustering to [ember-google-maps][ember-google-maps] using [@googlemaps/markerclustererplus][@googlemaps/markerclustererplus].
 
+> What is clustering?
+>
+> Drawing a lot of markers in close proximity can quickly turn into a usability nightmare. Grouping, or clustering, markers is a common way of simplifying how markers are displayed when used in large numbers.
+
 
 🔗 Compatibility
 ------------------------------------------------------------------------------
@@ -14,7 +18,7 @@ Add marker clustering to [ember-google-maps][ember-google-maps] using [@googlema
 * Node.js v10 or above
 
 
-Installation
+⚙️ Installation
 ------------------------------------------------------------------------------
 
 ```
@@ -22,14 +26,18 @@ ember install ember-google-maps-markerclustererplus
 ```
 
 
-Usage
+⭐ Usage
 ------------------------------------------------------------------------------
+
+[A version of the following guide, together with a demo, is included in the ember-google-maps docs →][ember-google-maps-clustering-guide].
 
 #### Cluster some markers
 
-The `markerClusterer` works in the same way as any other [ember-google-maps][ember-google-maps] component. If you're not sure how this works, [read through the guide for ember-google-maps][ember-google-maps-guide].
+The `markerClusterer` works in the same way as any other [ember-google-maps][ember-google-maps] component. If you're not sure what that means, [read through the general guide for ember-google-maps →][ember-google-maps-guide].
 
-The `markerClusterer` yields its own special `marker` that's added to the cluster instead of the map.
+The MarkerClustererPlus library accepts a bunch of options to configure the clusters. As with any map component, you can pass these options straight to the `markerClusterer` component. [Here’s a full list of supported options →](https://googlemaps.github.io/js-markerclustererplus/interfaces/markerclustereroptions.html)
+
+The `markerClusterer` yields its own special `marker` that's added to the cluster instead of the map. Don’t confuse it with the regular marker yielded by the map itself!
 
 ```hbs
 <GMap @lat="51.508530" @lng="-0.076132" as |map|>
@@ -46,7 +54,7 @@ The `markerClusterer` yields its own special `marker` that's added to the cluste
 
 #### Handle events
 
-You can also register events. You've got your usual suspects, like `click`, `dblclick`, and others; and also two special events: `clusteringbegin` and `clusteringend`. These are both native, albeit poorly publicized, `markerclustererplus` events. But beware! These clustering events may be called several times during a single render because `markerclustererplus` clusters markers in batches.
+You can also register events. You've got your usual suspects, like `click`, `dblclick`, and others; and also two special events: `clusteringbegin` and `clusteringend`. These are both native, albeit poorly publicized, MarkerClustererPlus events. But beware! These clustering events may be called several times during a single render because MarkerClustererPlus clusters markers in batches.
 
 ```hbs
 <GMap @lat="51.508530" @lng="-0.076132" as |map|>
@@ -116,6 +124,7 @@ This software is not endorsed, maintained, or supported by Google LLC.
 
 [ember-google-maps]: https://github.com/sandydoo/ember-google-maps
 [ember-google-maps-guide]: https://ember-google-maps.sandydoo.me/docs/getting-started
+[ember-google-maps-clustering-guide]: https://ember-google-maps.sandydoo.me/docs/clustering
 [@googlemaps/markerclustererplus]: https://github.com/googlemaps/js-markerclustererplus
 
 [maintainer-url]: https://github.com/sandydoo
