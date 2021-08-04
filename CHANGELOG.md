@@ -1,4 +1,18 @@
 
+
+## v0.0.3 (2021-08-04)
+
+#### :bug: Bug fixes
+* [#5](https://github.com/sandydoo/ember-google-maps-markerclustererplus/pull/5) Fix cluster teardown errors in FastBoot ([@sandydoo](https://github.com/sandydoo))
+* [#4](https://github.com/sandydoo/ember-google-maps-markerclustererplus/pull/4) Fix the default path to the cluster icons ([@sandydoo](https://github.com/sandydoo))
+
+#### :book: Documentation
+* [#6](https://github.com/sandydoo/ember-google-maps-markerclustererplus/pull/6) Improve docs ([@sandydoo](https://github.com/sandydoo))
+
+#### Committers: 1
+- Sander Melnikov ([@sandydoo](https://github.com/sandydoo))
+
+
 ## v0.0.2 (2021-07-28)
 
 #### :bug: Bug fixes
