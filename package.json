@@ -18,7 +18,7 @@
   "directories": {
     "test": "tests"
   },
-  "homepage": "https://ember-google-maps.sandydoo.me",
+  "homepage": "https://ember-google-maps.sandydoo.me/docs/clustering",
   "funding": {
     "type": "individual",
     "url": "https://ko-fi.com/sandydoo"
@@ -94,7 +94,11 @@
     "edition": "octane"
   },
   "ember-addon": {
-    "configPath": "tests/dummy/config"
+    "configPath": "tests/dummy/config",
+    "versionCompatibility": {
+      "ember": ">=3.16.0"
+    },
+    "demoURL": "https://ember-google-maps.sandydoo.me/docs/clustering"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
