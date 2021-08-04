@@ -36,7 +36,10 @@ export default class MarkerClustererComponent extends MapComponent {
   }
 
   teardown(mapComponent) {
-    mapComponent.clearMarkers();
+    if (mapComponent) {
+      mapComponent.clearMarkers();
+    }
+
     super.teardown();
   }
 
