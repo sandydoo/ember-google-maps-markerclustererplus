@@ -2,3 +2,18 @@
   width: 500px;
   height: 500px;
 }
+
+.gm-style-button {
+  background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+  border: 0px none;
+  margin: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-transform: none;
+  appearance: none;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+  font-family: Roboto, Arial, sans-serif;
+}
