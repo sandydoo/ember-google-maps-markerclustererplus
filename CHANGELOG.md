@@ -1,5 +1,19 @@
 
 
+
+## v0.1.0 (2021-08-05)
+
+#### :star: Features
+* [#9](https://github.com/sandydoo/ember-google-maps-markerclustererplus/pull/9) Implement an update hook, i.e. reuse the existing cluster ([@sandydoo](https://github.com/sandydoo))
+
+#### :book: Documentation
+* [#10](https://github.com/sandydoo/ember-google-maps-markerclustererplus/pull/10) Fix examples ([@sandydoo](https://github.com/sandydoo))
+* [#7](https://github.com/sandydoo/ember-google-maps-markerclustererplus/pull/7) Update `homepage` and `demoUrl` ([@sandydoo](https://github.com/sandydoo))
+
+#### Committers: 1
+- Sander Melnikov ([@sandydoo](https://github.com/sandydoo))
+
+
 ## v0.0.3 (2021-08-04)
 
 #### :bug: Bug fixes
