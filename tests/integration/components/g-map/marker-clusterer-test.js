@@ -4,35 +4,11 @@ import { setupMapTest } from 'ember-google-maps/test-support';
 import { click, waitFor as waitFor_, render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import { A } from '@ember/array';
-
-function randomInt(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+import { randomCoordinatesAround } from 'dummy/utils/coordinates';
 
 // Increase the default timeouts. Things can take a while sometimes.
 function waitFor(selector, options = {}) {
   return waitFor_(selector, { timeout: 5000, ...options });
-}
-
-function randomCoordinatesAround({ lat, lng }, count = 1) {
-  let coords = [];
-
-  for (let n = 0; n < count; n++) {
-    let heading = randomInt(1, 360),
-      distance = randomInt(50, 1000),
-      point = window.google.maps.geometry.spherical.computeOffset(
-        new window.google.maps.LatLng(lat, lng),
-        distance,
-        heading
-      );
-
-    coords.push({
-      lat: point.lat(),
-      lng: point.lng(),
-    });
-  }
-
-  return coords;
 }
 
 module('Integration | Component | g-map/marker-clusterer', function (hooks) {
@@ -147,7 +123,7 @@ module('Integration | Component | g-map/marker-clusterer', function (hooks) {
 
     this.set('trackedLocations', A(this.locations));
 
-    let assertNumberOfMarkersMatch = (cluster, message = null) => {
+    let assertNumberOfMarkersMatch = (cluster, message = undefined) => {
       assert.equal(
         cluster.getTotalMarkers(),
         this.trackedLocations.length,
@@ -166,22 +142,16 @@ module('Integration | Component | g-map/marker-clusterer', function (hooks) {
     `);
 
     let api = await this.waitForMap();
-    let clusterApi = api.components.markerClusters[0];
+    let cluster = api.components.markerClusters[0].mapComponent;
 
-    assertNumberOfMarkersMatch(clusterApi.mapComponent, 'rendered a cluster');
+    assertNumberOfMarkersMatch(cluster, 'rendered a cluster');
 
     this.trackedLocations.popObject();
     await this.waitForMap();
-    assertNumberOfMarkersMatch(
-      clusterApi.mapComponent,
-      'removed a marker from the cluster'
-    );
+    assertNumberOfMarkersMatch(cluster, 'removed a marker from the cluster');
 
     this.trackedLocations.pushObject(this.locations[0]);
     await this.waitForMap();
-    assertNumberOfMarkersMatch(
-      clusterApi.mapComponent,
-      'added a marker to the cluster'
-    );
+    assertNumberOfMarkersMatch(cluster, 'added a marker to the cluster');
   });
 });

@@ -1,5 +1,25 @@
-{{page-title "Dummy"}}
+{{page-title "Ember Google MarkerClustererPlus"}}
 
-<h2 id="title">Welcome to Ember</h2>
+<GMap @lat="51.507568" @lng="0" as |map|>
+  <map.markerClusterer as |cluster|>
+    {{#each this.locations as |location|}}
+      <cluster.marker @lat={{location.lat}} @lng={{location.lng}} />
+    {{/each}}
+  </map.markerClusterer>
+
+  <map.control
+    @position="BOTTOM"
+    title="Add a random marker to the cluster"
+    aria-label="Add a random marker to the cluster">
+    <button type="button" class="gm-style-button" {{on "click" this.addRandomLocation}}>➕</button>
+  </map.control>
+
+  <map.control
+    @position="BOTTOM"
+    title="Remove a marker from the cluster"
+    aria-label="Remove a marker from the cluster">
+    <button type="button" class="gm-style-button" {{on "click" this.removeFirstLocation}}>➖</button>
+  </map.control>
+</GMap>
 
 {{outlet}}
