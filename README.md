@@ -48,7 +48,7 @@ The `markerClusterer` yields its own special `marker` that's added to the cluste
       <cluster.marker @lat={{location.lat}} @lng={{location.lng}} />
     {{/each}}
 
-  </map.cluster>
+  </map.markerClusterer>
 </GMap>
 ```
 
@@ -69,7 +69,7 @@ You can also register events. You've got your usual suspects, like `click`, `dbl
       <cluster.marker @lat={{location.lat}} @lng={{location.lng}} />
     {{/each}}
 
-  </map.cluster>
+  </map.markerClusterer>
 </GMap>
 ```
 
@@ -88,7 +88,7 @@ The best way to do this is to register a one-time event with `@onceOn`.
       <cluster.marker @lat={{location.lat}} @lng={{location.lng}} />
     {{/each}}
 
-  </map.cluster>
+  </map.markerClusterer>
 </GMap>
 ```
 
