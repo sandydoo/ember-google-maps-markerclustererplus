@@ -8,6 +8,10 @@ module.exports = {
   name: require('./package').name,
 
   options: {
+    babel: {
+      plugins: ['@babel/plugin-proposal-logical-assignment-operators'],
+    },
+
     'ember-google-maps': {
       customComponents: {
         markerClusterer: 'g-map/marker-clusterer',
