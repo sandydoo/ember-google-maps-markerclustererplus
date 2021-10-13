@@ -1,6 +1,25 @@
 
 
 
+
+## v1.0.0 (2021-10-13)
+
+#### :boom: Breaking changes
+
+Your app needs to depend on ember-auto-import `>= 2` to use this addon! This will soon be a requirement for ember `>=4` as well.
+If you're upgrading from `1.x` to `2.x` [see the upgrade guide](https://github.com/ef4/ember-auto-import/blob/main/docs/upgrade-guide-2.0.md).
+* [#13](https://github.com/sandydoo/ember-google-maps-markerclustererplus/pull/13) Switch to ember-auto-import `>= 2` ([@sandydoo](https://github.com/sandydoo))
+
+#### :bug: Bug fixes
+* [#11](https://github.com/sandydoo/ember-google-maps-markerclustererplus/pull/11) Add transpilation support for nullish assignment ([@sandydoo](https://github.com/sandydoo))
+
+#### Internal
+* [#12](https://github.com/sandydoo/ember-google-maps-markerclustererplus/pull/12) Upgrade clusterer library ([@sandydoo](https://github.com/sandydoo))
+
+#### Committers: 1
+- Sander Melnikov ([@sandydoo](https://github.com/sandydoo))
+
+
 ## v0.1.0 (2021-08-05)
 
 #### :star: Features
