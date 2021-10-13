@@ -42,7 +42,7 @@
     "@sandydoo/tracked-maps-and-sets": "^2.2.2",
     "broccoli-funnel": "^3.0.8",
     "broccoli-merge-trees": "^4.2.0",
-    "ember-auto-import": "^1.11.2",
+    "ember-auto-import": "^2.2.2",
     "ember-cli-babel": "^7.26.3",
     "ember-cli-htmlbars": "^5.7.1",
     "ember-google-maps": "^4.2.1"
@@ -86,7 +86,8 @@
     "qunit": "^2.14.1",
     "qunit-dom": "^1.6.0",
     "release-it": "^14.10.1",
-    "release-it-lerna-changelog": "^3.1.0"
+    "release-it-lerna-changelog": "^3.1.0",
+    "webpack": "^5.58.2"
   },
   "engines": {
     "node": "10.* || >= 12"
