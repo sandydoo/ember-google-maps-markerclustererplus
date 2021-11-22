@@ -2,6 +2,20 @@
 
 
 
+
+## v1.0.1 (2021-11-22)
+
+#### :bug: Bug fixes
+* [#16](https://github.com/sandydoo/ember-google-maps-markerclustererplus/pull/16) Let host apps use newer versions of ember-google-maps ([@sandydoo](https://github.com/sandydoo))
+
+#### Internal
+* [#15](https://github.com/sandydoo/ember-google-maps-markerclustererplus/pull/15) Resolve babel plugins ([@sandydoo](https://github.com/sandydoo))
+* [#14](https://github.com/sandydoo/ember-google-maps-markerclustererplus/pull/14) Update license formatting and add copyright holder ([@sandydoo](https://github.com/sandydoo))
+
+#### Committers: 1
+- Sander Melnikov ([@sandydoo](https://github.com/sandydoo))
+
+
 ## v1.0.0 (2021-10-13)
 
 #### :boom: Breaking changes

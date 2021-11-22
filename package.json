@@ -1,6 +1,6 @@
 {
   "name": "ember-google-maps-markerclustererplus",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Add marker clustering to ember-google-maps using @googlemaps/markerclustererplus",
   "keywords": [
     "ember-addon",
