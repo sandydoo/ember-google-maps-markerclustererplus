@@ -48,7 +48,7 @@
     "ember-google-maps": "^4.2.1"
   },
   "peerDependencies": {
-    "ember-google-maps": "^4.2.1"
+    "ember-google-maps": ">=4.2.1"
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
