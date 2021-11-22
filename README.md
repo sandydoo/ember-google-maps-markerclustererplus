@@ -128,4 +128,4 @@ This software is not endorsed, maintained, or supported by Google LLC.
 [@googlemaps/markerclustererplus]: https://github.com/googlemaps/js-markerclustererplus
 
 [maintainer-url]: https://github.com/sandydoo
-[license-url]: https://github.com/sandydoo/ember-google-maps-markerclustererplus/blob/main/LICENSE.md
+[license-url]: https://github.com/sandydoo/ember-google-maps-markerclustererplus/blob/main/LICENSE
