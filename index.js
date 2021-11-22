@@ -9,7 +9,9 @@ module.exports = {
 
   options: {
     babel: {
-      plugins: ['@babel/plugin-proposal-logical-assignment-operators'],
+      plugins: [
+        require.resolve('@babel/plugin-proposal-logical-assignment-operators'),
+      ],
     },
 
     'ember-google-maps': {
